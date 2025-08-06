@@ -14,23 +14,41 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Remove Boilerplate
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+in globals.css remove all code after directives
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+page.tsx
 
-## Learn More
+function HomePage() {
+return <h1 className='text-3xl'>HomePage</h1>;
+}
 
-To learn more about Next.js, take a look at the following resources:
+export default HomePage;
+layout.tsx
+export const metadata: Metadata = {
+title: 'Tindahan',
+description: 'A nifty store built with Next.js',
+};
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create Pages
+about
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+admin
 
-## Deploy on Vercel
+cart
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+favorites
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+orders
+
+products
+
+reviews
+
+new file - pageName/page.tsx
+
+function AboutPage() {
+return <div>AboutPage</div>;
+}
+export default AboutPage;
