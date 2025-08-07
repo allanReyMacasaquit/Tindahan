@@ -19,17 +19,27 @@ function LinksDropdown() {
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className='w-40' align='start' sideOffset={10}>
-				{links.map((link) => {
-					return (
-						<DropdownMenuItem key={link.href}>
-							<Link href={link.href} className='capitalize w-full'>
-								{link.label}
-							</Link>
-						</DropdownMenuItem>
-					);
-				})}
+				{links.slice(0, 4).map((link) => (
+					<DropdownMenuItem key={link.href}>
+						<Link href={link.href} className='capitalize w-full'>
+							{link.label}
+						</Link>
+					</DropdownMenuItem>
+				))}
+
+				{/* Separator here */}
+				<DropdownMenuSeparator />
+
+				{links.slice(4).map((link) => (
+					<DropdownMenuItem key={link.href}>
+						<Link href={link.href} className='capitalize w-full'>
+							{link.label}
+						</Link>
+					</DropdownMenuItem>
+				))}
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);
 }
+
 export default LinksDropdown;
