@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
 				hostname: 'images.pexels.com',
 			},
 		],
+		unoptimized: true, // ⛔ Disable next/image optimization to avoid "sharp" issues
 	},
 };
 
