@@ -5,14 +5,7 @@ import Navbar from '@/components/navbar/Navbar';
 import Container from '@/components/global/Container';
 import { ThemeProvider } from './providers';
 import { Toaster } from '@/components/ui/sonner';
-import {
-	ClerkProvider,
-	SignInButton,
-	SignUpButton,
-	SignedIn,
-	SignedOut,
-	UserButton,
-} from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 const geistSans = Geist({
 	variable: '--font-geist-sans',
 	subsets: ['latin'],
